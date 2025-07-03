@@ -504,14 +504,14 @@ class Plugin {
 				$config = array(
 					'slug'               => 'pro-elements.php',
 					'plugin_basename'    => ELEMENTOR_PRO_PLUGIN_BASE,
-					'proper_folder_name' => 'pro-elements',
-					'api_url'            => 'https://api.github.com/repos/proelements/proelements',
-					'raw_url'            => 'https://raw.githubusercontent.com/proelements/proelements/master',
-					'github_url'         => 'https://github.com/proelements/proelements',
-					'zip_url'            => 'https://github.com/proelements/proelements/archive/v{release_version}.zip',
+					'proper_folder_name' => 'wpmu-landing-blocks-addons',
+					'api_url'            => 'https://api.github.com/repos/your-organization/wpmu-landing-blocks-addons',
+					'raw_url'            => 'https://raw.githubusercontent.com/your-organization/wpmu-landing-blocks-addons/master',
+					'github_url'         => 'https://github.com/your-organization/wpmu-landing-blocks-addons',
+					'zip_url'            => 'https://github.com/your-organization/wpmu-landing-blocks-addons/archive/v{release_version}.zip',
 					'sslverify'          => true,
 					'requires'           => '5.0',
-					'tested'             => '5.4.2',
+					'tested'             => '6.3',
 					'readme'             => 'README.md',
 					'access_token'       => '',
 				);
@@ -531,7 +531,7 @@ class Plugin {
 	}
 
 	final public static function get_title() {
-		return esc_html__( 'Pro Elements', 'elementor-pro' );
+		return esc_html__( 'WPMU Landing Blocks Addons', 'wpmu-landing-blocks-addons' );
 	}
 }
 

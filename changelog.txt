@@ -1,4 +1,13 @@
-# PRO Elements - by PROElements.org
+# WPMU Landing Blocks Addons - WP Multi Landings Team
+## Customized Elementor Pro features for wpml-blocks theme and WP Multi Landings projects
+
+#### 3.29.0 - 2025-07-03 (WPMU Landing Blocks Fork)
+
+* Fork: Customized PRO Elements for internal projects
+* Fork: Updated branding and plugin information
+
+---
+## Original PRO Elements Changelog
 #### 3.29.0 - 2025-05-19
 
 * New: Introduced Cloud Templates - save, manage, and reuse your templates across all your sites from a single cloud library

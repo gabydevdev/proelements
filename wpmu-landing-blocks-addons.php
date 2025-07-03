@@ -1,13 +1,8 @@
 <?php
 /**
- * Plugin Name: PRO Elements
- * Description: This plugin enables GPL features of Elementor Pro: widgets, theme builder, dynamic colors & content, forms & popup builder, and more. Note that PRO Elements is not a substitute for Elementor Pro. If you need all Elementor Pro features, including access to pro templates library and dedicated support, we encourage you to <a href="https://elementor.com/pro/" target="_blank">purchase Elementor Pro</a>.
- * Plugin URI: https://proelements.org/
- * Author: PROElements.org
+ * Plugin Name: WPMU Landing Blocks Addons
  * Version: 3.29.0
- * * Elementor tested up to: 3.29.0
- * Author URI: https://proelements.org/
- * Text Domain: elementor-pro
+ * Text Domain: wpmu-landing-blocks-addons
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -45,6 +40,7 @@ define( 'ELEMENTOR_PRO_URL', plugins_url( '/', ELEMENTOR_PRO__FILE__ ) );
 define( 'ELEMENTOR_PRO_ASSETS_URL', ELEMENTOR_PRO_URL . 'assets/' );
 define( 'ELEMENTOR_PRO_MODULES_URL', ELEMENTOR_PRO_URL . 'modules/' );
 	define( 'IS_PRO_ELEMENTS', 'true' );
+	define( 'IS_WPMU_LANDING_BLOCKS_ADDONS', 'true' );
 	add_action( 'plugins_loaded', 'pro_elements_load_plugin_func' );
 }
 
@@ -134,9 +130,9 @@ function pro_elements_plugin_fail_load() {
 
 		$install_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=elementor' ), 'install-plugin_elementor' );
 
-		$message = '<h3>' . esc_html__( 'Pro Elements plugin requires installing the Elementor plugin', 'elementor-pro' ) . '</h3>';
-		$message .= '<p>' . esc_html__( 'Install and activate the Elementor plugin to access all the features.', 'elementor-pro' ) . '</p>';
-		$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $install_url, esc_html__( 'Install Now', 'elementor-pro' ) ) . '</p>';
+		$message = '<h3>' . esc_html__( 'WPMU Landing Blocks Addons requires the Elementor plugin', 'wpmu-landing-blocks-addons' ) . '</h3>';
+		$message .= '<p>' . esc_html__( 'Install and activate the Elementor plugin to access WPMU Landing Blocks Addons features for your WP Multi Landings projects.', 'wpmu-landing-blocks-addons' ) . '</p>';
+		$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $install_url, esc_html__( 'Install Now', 'wpmu-landing-blocks-addons' ) ) . '</p>';
 	}
 
 	pro_elements_print_error($message);
@@ -152,11 +148,11 @@ function pro_elements_plugin_fail_load_out_of_date() {
 	$upgrade_link = wp_nonce_url( self_admin_url( 'update.php?action=upgrade-plugin&plugin=' ) . $file_path, 'upgrade-plugin_' . $file_path );
 	$message = sprintf(
 	/* translators: 1: Title opening tag, 2: Title closing tag */
-		esc_html__( '%1$sPro Elements  requires newer version of the Elementor plugin%2$s Update the Elementor plugin to reactivate the Pro Elements plugin.', 'elementor-pro' ),
+		esc_html__( '%1$sWPMU Landing Blocks Addons requires newer version of the Elementor plugin%2$s Update the Elementor plugin to reactivate the WPMU Landing Blocks Addons plugin.', 'wpmu-landing-blocks-addons' ),
 		'<h3>',
 		'</h3>'
 	);
-	$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $upgrade_link, esc_html__( 'Update Now', 'elementor-pro' ) ) . '</p>';
+	$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $upgrade_link, esc_html__( 'Update Now', 'wpmu-landing-blocks-addons' ) ) . '</p>';
 
 	pro_elements_print_error($message);
 }
